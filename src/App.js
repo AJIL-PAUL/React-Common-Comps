@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import TabContainer from "./Components.js/TabContainer";
 import Button from "./Components.js/Commom/Button";
 
@@ -10,7 +9,7 @@ function App() {
         <TabContainer />
       </div>
       <Button className="bg-blue-600 px-8 py-2 text-white mt-10 mr-auto">
-        Hellooooo
+        Ripple Button
       </Button>
     </div>
   );

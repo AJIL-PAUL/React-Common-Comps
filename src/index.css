@@ -24,25 +24,3 @@ button {
     linear-gradient(90deg, #232323 3.26%, rgba(45, 45, 45, 0) 29.15%);
   background-blend-mode: normal, color-burn, normal, normal;
 }
-
-.rippleClass {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.ripple-span {
-  transform: scale(0);
-  border-radius: 100%;
-  position: absolute;
-  opacity: 0.75;
-}
-
-@keyframes abc {
-  to {
-    opacity: 0;
-    transform: scale(2);
-  }
-}
