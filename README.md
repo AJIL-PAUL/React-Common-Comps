@@ -1,3 +1,68 @@
+# Some common usefull components for React App with TailwindCSS
+
+## 1. Ripple Button
+
+```
+<Button
+className="bg-blue-600 px-8 py-2 text-white mt-10 mr-auto" 
+onClick={handleClick} 
+> 
+Ripple Button 
+</Button> 
+```
+  
+  You can pass the button styling properties as className.
+  
+## 2. Tabs
+```
+const list = [
+  {
+    name: "Tab 1",
+  },
+  {
+    name: "Tab 2",
+  },
+  {
+    name: "Tab 3",
+  },
+  {
+    name: "Tab 4",
+  },
+];
+const TabContainer = ({}) => {
+  const [active, setActive] = React.useState("Tab 1"); //Initialize the active tab
+  return (
+    <div>
+      <div className="flex justify-center w-full">
+        <Tabs
+          className=" flex bg-gray-100  w-full text-center justify-around uppercase text-sm font-medium text-gray-500"
+          tabClasses="py-2 px-6"
+          activeClasses=" text-primary-blue bg-white "
+          active={active}
+          borderClasses="border-b-4 rounded-t-full border-primary-blue"
+          onChange={(e) => setActive(e)}
+        >
+          {list.map((el) => (
+            <div key={el.name} className="flex pb-3 flex-col">
+              <span className="">{el.name}</span>
+            </div>
+          ))}
+        </Tabs>
+      </div>
+    </div>
+  );
+};
+```
+### Properties:
+    active : Active tab name
+    className : Classes for the entire tab container
+    tabClasses : Classes for each tab
+    activeClasses : Classes for active tab
+    borderClasses : Classes for the bottom line for active tab    
+    onChange : OnChange funtion; Pass the key of the tab as parameter
+
+Please note that you should pass the unique tab name as key.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
